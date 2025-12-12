@@ -1,6 +1,6 @@
 {
-  "name": "SearchWindow",
-  "displayName": "Search Files",
+  "name": "SearchWindowSimpleAndFast",
+  "displayName": "Search Files Simple and Fast",
   "icon": "image/icon.png",
   "publisher": "ShaiSarfaty",
   "description": "Search files by their names in the workspace.",
