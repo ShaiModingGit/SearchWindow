@@ -16,12 +16,12 @@ Click the icon added by this extension on the left sidebar, then type filename t
 
 ## Release Notes
 ### 0.7.0
--Taken the source code to source file extension development.
--Added auto focus to the show window
--Added new command to bind key to it so it will show window and auto focus to the search text box
--Added filter text box for file suffixes to include
--Added navigation with arrows up and down and enter to present item in list
--Added save sticky search text to not be deleted from last time searched
+- Taken the source code to source file extension development.
+- Added auto focus to the show window
+- Added new command to bind key to it so it will show window and auto focus to the search text box
+- Added filter text box for file suffixes to include
+- Added navigation with arrows up and down and enter to present item in list
+- Added save sticky search text to not be deleted from last time searched
 
 ### 0.1.0
 Initial release.
