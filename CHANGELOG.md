@@ -15,3 +15,6 @@
 - Added filter text box for file suffixes to include
 - Added navigation with arrows up and down and enter to present item in list
 - Added save sticky search text to not be deleted from last time searched
+
+### 0.7.1
+- Some notes fix
