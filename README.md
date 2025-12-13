@@ -15,6 +15,9 @@ Click the icon added by this extension on the left sidebar, then type filename t
 
 
 ## Release Notes
+### 0.7.1
+- Some notes fix
+
 ### 0.7.0
 - Taken the source code to source file extension development.
 - Added auto focus to the show window
