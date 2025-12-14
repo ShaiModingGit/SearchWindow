@@ -5,7 +5,7 @@ originally created by nancex. now moded by shai sarfaty as it was a good baselin
 With this extension, you can easily search files by their names and open them in the editor and filter by file sufix.
 command "showSearch" exist for your keybinding comfort to Show windoq and Focus on the search text box.
 
-![gif1](https://github.com/nancex/vscode-search-files/blob/main/1.gif?raw=true)
+![gif1](https://github.com/ShaiModingGit/SearchWindow/1.gif?raw=true)
 
 
 
@@ -15,6 +15,12 @@ Click the icon added by this extension on the left sidebar, then type filename t
 
 
 ## Release Notes
+### 0.7.7
+- Added new bold font on found results 
+
+### 0.7.5
+- Fix "orderby" by better show resualts on how close it is to the prefix then by alphabet 
+
 ### 0.7.1
 - Some notes fix
 

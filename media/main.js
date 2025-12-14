@@ -156,6 +156,28 @@
         saveState();
     }
 
+    function highlightMatch(text, searchQuery) {
+        if (!searchQuery) {
+            return text;
+        }
+
+        try {
+            let regex;
+            if (useRegex) {
+                regex = new RegExp(`(${searchQuery})`, isCaseSensitive ? 'g' : 'gi');
+            } else {
+                // Escape special regex characters for literal search
+                const escapedQuery = searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                regex = new RegExp(`(${escapedQuery})`, isCaseSensitive ? 'g' : 'gi');
+            }
+            
+            return text.replace(regex, '<strong>$1</strong>');
+        } catch (e) {
+            // If regex fails, return original text
+            return text;
+        }
+    }
+
     function displayResults(resultsList) {
         resultsContainer.innerHTML = ''; // Clear previous results
         if (!resultsList || resultsList.length === 0) {
@@ -176,7 +198,7 @@
 
             const label = document.createElement('div');
             label.className = 'result-label';
-            label.textContent = file.label;
+            label.innerHTML = highlightMatch(file.label, searchInput.value);
 
             const description = document.createElement('div');
             description.className = 'result-description';

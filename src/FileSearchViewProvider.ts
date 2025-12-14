@@ -80,6 +80,22 @@ export class FileSearchViewProvider implements vscode.WebviewViewProvider {
                                 label: path.basename(file.fsPath),
                                 description: vscode.workspace.asRelativePath(file)
                             };
+                        }).sort((a, b) => {
+                            // Sort by: 1) how close the match is to the beginning, 2) alphabetically
+                            const searchTerm = data.caseSensitive ? data.value : data.value.toLowerCase();
+                            const labelA = data.caseSensitive ? a.label : a.label.toLowerCase();
+                            const labelB = data.caseSensitive ? b.label : b.label.toLowerCase();
+                            
+                            const indexA = labelA.indexOf(searchTerm);
+                            const indexB = labelB.indexOf(searchTerm);
+                            
+                            // Both match at the same position, sort alphabetically
+                            if (indexA === indexB) {
+                                return a.label.localeCompare(b.label);
+                            }
+                            
+                            // Sort by position of match (closer to beginning = lower index = comes first)
+                            return indexA - indexB;
                         });
                         
                         webviewView.webview.postMessage({ type: 'results', results: searchResults });

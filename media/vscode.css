@@ -130,7 +130,12 @@ body {
 }
 
 .result-label {
-    font-weight: bold;
+    font-weight: 300;
+    font-size: calc(1em + 2px);
+}
+
+.result-label strong {
+    font-weight: 700;
 }
 
 .result-description {
