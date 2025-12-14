@@ -5,7 +5,7 @@ originally created by nancex. now moded by shai sarfaty as it was a good baselin
 With this extension, you can easily search files by their names and open them in the editor and filter by file sufix.
 command "showSearch" exist for your keybinding comfort to Show windoq and Focus on the search text box.
 
-![gif1](https://github.com/ShaiModingGit/SearchWindow/1.gif?raw=true)
+![gif1](https://github.com/ShaiModingGit/SearchWindow/blob/master/1.gif?raw=true)
 
 
 
