@@ -178,6 +178,14 @@
         }
     }
 
+    function renderMarkdown(text) {
+        if (!text) {
+            return text;
+        }
+        // Convert **text** to <strong>text</strong>
+        return text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    }
+
     function displayResults(resultsList) {
         resultsContainer.innerHTML = ''; // Clear previous results
         if (!resultsList || resultsList.length === 0) {
@@ -198,7 +206,12 @@
 
             const label = document.createElement('div');
             label.className = 'result-label';
-            label.innerHTML = highlightMatch(file.label, searchInput.value);
+            // Use boldedLabel if available (from backend), otherwise fall back to highlighting
+            if (file.boldedLabel) {
+                label.innerHTML = renderMarkdown(file.boldedLabel);
+            } else {
+                label.innerHTML = highlightMatch(file.label, searchInput.value);
+            }
 
             const description = document.createElement('div');
             description.className = 'result-description';

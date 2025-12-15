@@ -17,7 +17,11 @@
 - Added save sticky search text to not be deleted from last time searched
 
 ### 0.7.5
-- Fix  "orderby" by better show resualts on how close it is to the prefix then by alphabet 
+- Fix  "order-by" by better show results on how close it is to the prefix then by alphabet 
 
 ### 0.7.7
 - added new bold font on found results 
+
+### 0.7.9
+- fixed sort algo
+- fix Outdated Packages and audit fix

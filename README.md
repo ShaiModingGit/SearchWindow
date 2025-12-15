@@ -3,7 +3,7 @@ this is based on the source code of : https://marketplace.visualstudio.com/items
 originally created by nancex. now moded by shai sarfaty as it was a good baseline to developed from.
 
 With this extension, you can easily search files by their names and open them in the editor and filter by file sufix.
-command "showSearch" exist for your keybinding comfort to Show windoq and Focus on the search text box.
+command "showSearch" exist for your key binding comfort to Show window and Focus on the search text box.
 
 ![gif1](https://github.com/ShaiModingGit/SearchWindow/blob/master/1.gif?raw=true)
 
@@ -15,11 +15,15 @@ Click the icon added by this extension on the left sidebar, then type filename t
 
 
 ## Release Notes
+### 0.7.9
+- fixed sort algo
+- fix Outdated Packages and audit fix
+
 ### 0.7.7
 - Added new bold font on found results 
 
 ### 0.7.5
-- Fix "orderby" by better show resualts on how close it is to the prefix then by alphabet 
+- Fix "order-by" by better show results on how close it is to the prefix then by alphabet 
 
 ### 0.7.1
 - Some notes fix
